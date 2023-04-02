@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . /app
 
 # to build non native dependencies
-RUN apk update && apk add build-base libffi-dev tzdata
+RUN apk update && apk add build-base libffi-dev tzdata libpq-dev
 
 RUN bundle config set --global force_ruby_platform true && bundle install
 
